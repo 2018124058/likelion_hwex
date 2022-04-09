@@ -1,10 +1,10 @@
 *   {font-family: Noto Sans KR, Nanum Gothic, 나눔고딕;}
 h2  {font-weight: bold; font-size: 30px;}
+body {margin: 0px;} /* 모두 꽉차게! */
 
 /*header*/ /*header 요소 위아래 정렬*/
 header  {background-color: rgb(25,55,113); display:flex; align-items: center; justify-content: flex-end;
         margin-top: 0px; margin-bottom: 0px; padding: 0px; height: 42px; overflow: hidden; width: 100%;}
-
 header button  {float:right; margin: 4px; border-radius: 4px; height: 25px; width: 80px; font-weight: bold;
                 background-color: rgb(67,116,207); color: white; border: rgb(67,116,207)}
             
@@ -23,10 +23,10 @@ nav {background-color: rgb(6, 25,52); height: 80px; margin-top: 0px; color: whit
 .last-menu {margin-right: 70px;}
 .fixed  {position: fixed; z-index:2; width: 100%;}
 
-.mainimg        {padding-top: 122px; width: 100%;}
+.mainimg        {padding-top: 122px; width: 100%; padding-bottom: 0px;}
 /*contatiner1: 공지사항, 홍보영상*/
 .container1 {display: flex; justify-content: center;
-            background-color: rgb(240,242,249); padding-bottom: 100px; margin-top: 0px; padding-top: 0px;}
+            background-color: rgb(240,242,249); padding-bottom: 100px; width: 100%;}
 
 /*공지사항*/
 .announcement   {margin-right: 100px;}
