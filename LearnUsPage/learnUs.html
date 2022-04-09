@@ -6,27 +6,30 @@
         <link rel = "stylesheet" type = "text/css" href = "learnUs.css"> 
     </head>
     <body>
-        <header>
-            <button class = "login-button">로그인</button>
-            <button class = "signup-button">회원가입</button>
-            <select name = "language" class = "language-select">
-                <option selected>한국어 (ko)</option>
-                <option>English (en)</option>
-            </select>
-        </header>
-
-        <nav>
-            <p class ="logo">LearnUs</p>
-            <p class = "menu last-menu">검색</p>
-            <p class = "menu">이용안내</p>
-            <p class = "menu">학위과정</p>
-            <p class = "menu">국제과정</p>
-            <p class = "menu">공개과정</p>
-            <p class = "menu">전문과정</p>
-        </nav>
+        <div class = "fixed">
+            <header>
+                <select name = "language" class = "language-select">
+                    <option selected>한국어 (ko)</option>
+                    <option>English (en)</option>
+                </select>
+                <button class = "signup-button">회원가입</button>
+                <button class = "login-button">로그인</button>
+            </header>
         
-        <section>
-            <img src = "learnUs대문.PNG" alt = "대문 사진" width = 100%>
+
+            <nav>
+                <p class ="logo">LearnUs</p>
+                <p class = "menu last-menu">검색</p>
+                <p class = "menu">이용안내</p>
+                <p class = "menu">학위과정</p>
+                <p class = "menu">국제과정</p>
+                <p class = "menu">공개과정</p>
+                <p class = "menu">전문과정</p>
+            </nav>
+        </div>
+        
+        <section class = "mainimg">
+            <img src = "learnUs대문.PNG" alt = "대문 사진" width = "100%" >
             <!--양 옆으로 넘기는 버튼-->
         </section>
 

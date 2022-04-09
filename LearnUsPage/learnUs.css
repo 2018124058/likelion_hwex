@@ -2,28 +2,31 @@
 h2  {font-weight: bold; font-size: 30px;}
 
 /*header*/ /*header 요소 위아래 정렬*/
-header  {background-color: rgb(25,55,113);
-        margin-top: 0px; margin-bottom: 0px; padding: 0px; height: 42px; overflow: hidden;}
+header  {background-color: rgb(25,55,113); display:flex; align-items: center; justify-content: flex-end;
+        margin-top: 0px; margin-bottom: 0px; padding: 0px; height: 42px; overflow: hidden; width: 100%;}
 
 header button  {float:right; margin: 4px; border-radius: 4px; height: 25px; width: 80px; font-weight: bold;
                 background-color: rgb(67,116,207); color: white; border: rgb(67,116,207)}
             
-.login-button   {margin-right: 70px;} 
+.login-button   {margin-right: 70px;}
 
 .language-select    {float:right; padding: 3px; border-radius: 4px; height: 30px; 
-                    margin-top: auto; margin-bottom: auto; margin-left: 20px; /*왜 select는 margin이 말을 안듣지?*/
+                    margin-top: auto; margin-bottom: auto; margin-left: 20px; 
                     background-color: rgb(6,25,52); border: rgb(6,25,52);
                     color: white; font-weight: bold; }
 
 /*nav*/
 nav {background-color: rgb(6, 25,52); height: 80px; margin-top: 0px; color: white; overflow: hidden;}
-.logo    {font-weight: bolder; font-size: 25px; margin-left: 60px; float: left;}
-.menu   {font-size: 18px; margin: 20px; float: right; position: relative; top: 10px;} /* menu <p> 가운데 정렬 */
-.last-menu {margin-right: 70px;}
 
+.logo    {font-weight: bolder; font-size: 25px; margin-left: 60px; float: left;}
+.menu   {font-size: 18px; margin: 20px; float: right; position: relative; top: 10px;} 
+.last-menu {margin-right: 70px;}
+.fixed  {position: fixed; z-index:2; width: 100%;}
+
+.mainimg        {padding-top: 122px; width: 100%;}
 /*contatiner1: 공지사항, 홍보영상*/
 .container1 {display: flex; justify-content: center;
-            background-color: rgb(240,242,249); padding-bottom: 100px;}
+            background-color: rgb(240,242,249); padding-bottom: 100px; margin-top: 0px; padding-top: 0px;}
 
 /*공지사항*/
 .announcement   {margin-right: 100px;}
@@ -71,12 +74,12 @@ nav {background-color: rgb(6, 25,52); height: 80px; margin-top: 0px; color: whit
 .lecture-category   {color:rgb(153,157,184); font-size: 15px; margin-left:20px;}
 .lecture-name   {margin-left: 20px;}
 .lecture-open   {border-top: 1px solid rgb(195,195,195); background-color: rgb(233,233,233);
-                line-height: 15px; padding-bottom: 1px;} /*왜 여기서 패딩이 0이면 박스가 다 안채워질까?*/
+                line-height: 15px; padding-bottom: 1px;} 
 .open   {font-size: 15px; margin-left: 20px;}
 .open-date  {font-size: 15px; color: rgb(153,157,184); margin-left: 20px;}
 
 /* 하단부 */
-
+.footer {width: 100%;}
 .footer1    {background-color: rgb(48,48,48); padding: 40px; margin-top: 100px; }
 .footer1 p  {color: rgb(100,100,100);}
 .footer2    {background-color: black; padding: 40px; } 
