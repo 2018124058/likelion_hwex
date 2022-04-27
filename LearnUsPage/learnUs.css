@@ -2,7 +2,7 @@
 h2  {font-weight: bold; font-size: 30px;}
 body {margin: 0px;} /* 모두 꽉차게! */
 
-/*header*/ /*header 요소 위아래 정렬*/
+/*header*/ 
 header  {background-color: rgb(25,55,113); display:flex; align-items: center; justify-content: flex-end;
         margin-top: 0px; margin-bottom: 0px; padding: 0px; height: 42px; overflow: hidden; width: 100%;}
 header button  {float:right; margin: 4px; border-radius: 4px; height: 25px; width: 80px; font-weight: bold;
@@ -23,10 +23,10 @@ nav {background-color: rgb(6, 25,52); height: 80px; margin-top: 0px; color: whit
 .last-menu {margin-right: 70px;}
 .fixed  {position: fixed; z-index:2; width: 100%;}
 
-.mainimg        {padding-top: 122px; width: 100%; padding-bottom: 0px;}
+.mainimg        {padding-top: 122px; width: 100%;}
 /*contatiner1: 공지사항, 홍보영상*/
 .container1 {display: flex; justify-content: center;
-            background-color: rgb(240,242,249); padding-bottom: 100px; width: 100%;}
+            background-color: rgb(240,242,249); padding-bottom: 100px; width: 100%; margin-top: -10px;}
 
 /*공지사항*/
 .announcement   {margin-right: 100px;}
@@ -79,7 +79,7 @@ nav {background-color: rgb(6, 25,52); height: 80px; margin-top: 0px; color: whit
 .open-date  {font-size: 15px; color: rgb(153,157,184); margin-left: 20px;}
 
 /* 하단부 */
-.footer {width: 100%;}
+
 .footer1    {background-color: rgb(48,48,48); padding: 40px; margin-top: 100px; }
 .footer1 p  {color: rgb(100,100,100);}
 .footer2    {background-color: black; padding: 40px; } 
