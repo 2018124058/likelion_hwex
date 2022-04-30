@@ -37,4 +37,4 @@ if len(menu) == 5:
     print("")
 
     today_menu = random.choice(menu)
-    print("오늘의 메뉴는", menu.index(today_menu), "번째 메뉴,", today_menu, "입니다.")
+    print("오늘의 메뉴는", menu.index(today_menu) + 1, "번째 메뉴,", today_menu, "입니다.")
