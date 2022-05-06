@@ -241,27 +241,6 @@ message["From"] = "2018124058@yonsei.ac.kr"
 message["TO"] = "수신할 주소"
 ```
 
-## 메일 보내기 코드 정리 
-```
-import smtplib
-from email.message import EmailMessage
-
-SMTP_SERVER = "smtp.gmail.com" # 서버 이름 (개인 메일 주소x)
-SMTP_PORT = 465
-
-message = EmailMessage()
-message.set_content("메일 내용")
-
-message["Subject"] = "이것은 제목입니다."
-message["From"] = "###@gmail.com"
-message["To"] = "###@gmail.com"
-
-smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT)
-smtp.login("###@gmail.com","######")
-smtp.send_message()
-smtp.quit()
-```  
-
 ## 메일에 사진 첨부하기  
 - 파일 모드 rb(read binary), wb, ab: binary-컴퓨터가 읽고 이해하기 편한 문자(이미지, 영상 파일 대체로 이런 모드)  
 
@@ -316,6 +295,43 @@ def sendEmail(addr):
         print("메일 전송")
     else:
         print("유효한 이메일 주소가 아닙니다.")
+```
+
+## 메일 보내기 코드 정리 
+```
+import smtplib
+from email.message import EmailMessage
+import imghdr
+import re
+
+# 서버 연결 
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 465
+smtp = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
+
+# 로그인
+smtp.login("###@gmail.com", "~~~") # ~~~에 password 입력 
+
+# 메일 생성 
+message = EmailMessage()
+message.set_content("메일 내용") 
+
+message["Subject"] = "제목"
+message["From"] = "###@gmail.com"
+message["To"] = "###@gmail.com"
+
+# 메일 전송 
+def sendEmail(addr):
+    reg = "^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$"
+    if bool(re.match(reg,addr)):
+        message["To"] = addr
+        smtp.send_message(message)
+        print("정상적으로 메일이 발송되었습니다.")
+    else:
+        print("유효한 이메일 주소가 아닙니다.")
+
+sendEmail("sojeong9916@gmail.com")
+smtp.quit()
 ```
 
 
