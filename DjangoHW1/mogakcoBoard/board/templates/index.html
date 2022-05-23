@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<img class = "homeimg" src="{% static 'img/homeimg.JPG' %}" alt="대문 사진">
+
+<div>
+    <a href="{% url 'form' %}">새 글 작성</a>
+</div>
+{% endblock %}
