@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <title>모각코 게시판</title>
 </head>
 <body>
-    <p class = "header">모각코 모집 게시판</p>
+    <section class="container">
+        <p class = "header">모각코 모집 게시판</p>
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
+    </section>
 </body>
 </html>

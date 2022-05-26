@@ -3,8 +3,29 @@
 {% load static %}
 {% block content %}
 <img class = "homeimg" src="{% static 'img/homeimg.JPG' %}" alt="대문 사진">
+    <table>
+    <thead>
+        <tr>
+            <th width='40%'>제목</th>
+            <th>작성 날짜</th>
+            <th>작성자</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <div>
+            <tr>
+                <td><a href="{% url 'detail' post.id %}">{{ post.title }}</a></td>
+                <td>{{ post.date }}</td>
+                <td>익명</td>
+            </tr>
+        </div>
+        {% endfor %}
+    </tbody>
+</table>
 
-<div>
-    <a href="{% url 'form' %}">새 글 작성</a>
+
+<div class = "button">
+    <a class="btn" href="{% url 'postcreate' %}" role="button">새 글 작성</a>
 </div>
 {% endblock %}
