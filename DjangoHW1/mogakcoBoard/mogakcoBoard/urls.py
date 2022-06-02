@@ -19,6 +19,8 @@ from board import views
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import include
+from account import views as account_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +28,11 @@ urlpatterns = [
     path('postcreate/', views.postcreate, name='postcreate'),
     path('detail/<int:post_id>', views.detail, name='detail'),
     path('new_comment/<int:post_id>', views.new_comment, name='new_comment'),
+    path('account/', include('account.urls')),
+    path('post_delete/<int:post_id>', views.post_delete, name='post_delete'),
+    path('post_update/<int:post_id>', views.post_update, name='post_update'),
+    path('comment_delete/<int:comment_id>', views.comment_delete, name='comment_delete'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

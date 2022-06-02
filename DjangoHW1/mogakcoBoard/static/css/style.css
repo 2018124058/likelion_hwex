@@ -14,7 +14,10 @@ body    {padding: 0px;
         margin-top: 0px;
         font-weight: bold;
         width: 80%;
+        display: flex;
+        justify-content: space-between;
         }
+
 
 .homeimg    {width: 80%;
             margin-right: auto; margin-left: auto;
@@ -51,7 +54,8 @@ thead   {background-color: rgb(245,222,241);}
 /* 상세페이지 */
 .page-title     {color: royalblue;}
 .post-detail    {margin-bottom: 50px;
-                margin-top: 30px;}
+                margin-top: 30px;
+                }       
 .comment-header {overflow: hidden;}
 .comment-id     {float:left;
                 margin-right: 700px;}
@@ -60,9 +64,10 @@ thead   {background-color: rgb(245,222,241);}
 
 
 .post-header    {display:flex; 
-                justify-content: space-between;
+                justify-items: space-around;
                 align-items: baseline;
-                margin-bottom:30px;}
-.post-title     {margin-right: 150px;}
+                margin-bottom:30px;
+                }
 
-.post-detail    {width:80%;}
+.post-title     {padding: 0px;
+                margin-right: 0px;}

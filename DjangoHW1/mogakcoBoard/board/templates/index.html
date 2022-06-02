@@ -17,15 +17,16 @@
             <tr>
                 <td><a href="{% url 'detail' post.id %}">{{ post.title }}</a></td>
                 <td>{{ post.date }}</td>
-                <td>익명</td>
+                <td>{{ post.author.username }}</td>
             </tr>
         </div>
         {% endfor %}
     </tbody>
 </table>
 
-
+{% if user.is_authenticated %}
 <div class = "button">
     <a class="btn" href="{% url 'postcreate' %}" role="button">새 글 작성</a>
 </div>
+{% endif %}
 {% endblock %}
